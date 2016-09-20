@@ -1,8 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER cjonesy
 
-ENV VERTICA_VERSION=8.0.0-0
-
 # ------------------------------------------------------------------------------
 # Update the image and prepare for Vertica install
 # ------------------------------------------------------------------------------
@@ -39,7 +37,7 @@ ENV SHELL "/bin/bash"
 # ------------------------------------------------------------------------------
 # Install Vertica
 # ------------------------------------------------------------------------------
-ADD vertica_${VERTICA_VERSION}_amd64.deb /tmp/vertica.deb
+ADD vertica_*_amd64.deb /tmp/vertica.deb
 RUN dpkg -i /tmp/vertica.deb \
 &&  rm -f /tmp/vertica.deb \
 &&  /opt/vertica/sbin/install_vertica --license CE \
