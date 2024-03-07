@@ -1,3 +1,7 @@
+# **No longer maintained**
+
+See instead: https://github.com/vertica/vertica-containers
+
 # Docker Image for Vertica
 
 Dockerfile to build image of Vertica Community Edition.
